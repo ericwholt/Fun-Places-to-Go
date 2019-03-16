@@ -14,7 +14,7 @@ namespace Deliverable2
                               "3) Danger \n\t" +
                               "4) Good Food");
             int optionSelected = GetUserSelection(1, 4, "Please choose 1,2,3, or 4");
-            int numberOfPeople = GetUserSelection(1, int.MaxValue, "How many people are you bringing with you?");
+            int numberOfPeople = GetUserSelection(0, int.MaxValue, "How many people are you bringing with you?");
             Console.WriteLine(GetSuggestion(optionSelected, numberOfPeople));
             Console.WriteLine("Goodbye.");
             Console.ReadLine();
@@ -22,7 +22,7 @@ namespace Deliverable2
 
         private static int GetUserSelection(int startValue, int endValue, string message)
         {
-            int selection = 0;
+            int selection = int.MinValue;
 
             Console.WriteLine(message);
 
@@ -86,7 +86,7 @@ namespace Deliverable2
                          choice +
                          ", then you should go to " +
                          activity +
-                         " and travel in a " +
+                         " and travel in " +
                          modeOfTransportation + "!";
 
             
